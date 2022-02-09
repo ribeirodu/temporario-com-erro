@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Game Corp</title>
+    <!--BOOTSTRAP - CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="renderizarNoticias()">
+    <header>
+        <div class="container-grid posicionamento-header">
+            <a href=""><img class="logo" src="img/Fantasy_Logo_Branco-com-Sombra 1.png" alt="Logo do Site"></a>
+            
+            <nav id="menu" class="menu">
+                <a href="">Home</a>
+                <a href="">Jogos</a>
+                <a href="">Notícias</a>
+                <a href="">Loja</a>
+                <a href="">Suporte</a>
+                <a href="">Minha Conta</a>
+                <a href=""><img src="img/lupa.png" alt="Pesquisa" onclick="mostraBusca()"></a>
+                <div id="busca">
+                    <form class="busca" action="">
+                        <input id="busca-entrada" type="text" placeholder="O que você está procurando?">
+                        <button onclick="busca()">Procurar</button>
+                    </form>
+                </div>
+            </nav>
+            <a href="#" id="barras"><img class="barras" src="img/menu_icon.svg" alt="Menu de Barras"></a>
+        </div>
+    </header>
+
+    <div id="carrossel" class="carrossel">
+        <img src="img/banners/Banner_01.png" alt="DDO Feywild">
+        <img src="img/banners/Banner_02.png" alt="Afranio responde">
+    </div>
+
+    <!-- <div class="banner">
+        <div class="container-grid posicao-texto">
+            <div class="texto-banner">
+                <h1></h1>
+                <p></p>
+                <a href=""></a>
+            </div>
+    </div> -->
+    </div>
+    <section class="secao-sobre">
+        <div class="conteudo-sobre container">
+            <div class="row">
+                <div class="texto-sobre col-md-9">
+                    <h2 class="atualizacoes">Últimas atualizações</h2>
+                    <div id="espaco-noticias" class="content-news">
+                        <!-- <div class="cardnews">
+                            <p class="noticias"><a href="">15/12/2021 - WoW - Acompanhe o desenvolvimento da nova classe!</a></p>
+                        </div>
+                        <div class="cardnews">
+                            <p class="noticias"><a href="">14/12/2021 - KalOnline - Nova area e nova raid em DeVah!</a></p>
+                        </div>
+                        <div class="cardnews">
+                            <p class="noticias"><a href="">10/12/2021 - GW2 - Novas montarias a caminho!</a></p>
+                        </div>
+                        <div class="cardnews">
+                            <p class="noticias"><a href="">10/12/2021 - Tetris - Quadradinhos e mais quadradinhos</a></p>
+                        </div>
+                        <div class="cardnews">
+                            <p class="noticias"><a href="">10/12/2021 - DDO - Vencedor da screenshot da semana</a></p>
+                        </div>
+                        <div class="cardnews">
+                            <p class="noticias"><a href="">09/12/2021 - Presença da Fantasy no E3!</a></p>
+                        </div>
+                        <div class="cardnews">
+                            <p class="noticias"><a href="">09/12/2021 - Planejamento de lançamentos para o próximo trimestre</a></p>
+                        </div> -->
+                    </div>    
+                </div>
+                <div class="imgpromo col-md-3">
+                    <a href=""><img src="img/promo/Promo.png" alt="Imagem da promoção"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section class="secao-galeria container">
+        <div class="row">
+            <div class="concurso">
+                Concurso Screenshot da semana
+            </div>
+            <div class="galeria">
+                <a href=""><img src="img/galeria/040915screenshotwk217.jpg"></a>
+                <a href=""><img src="img/galeria/062220screenshotwk469.jpg"></a>
+                <a href=""><img src="img/galeria/111620screenshotwk489.jpg"></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="secao-footer container">
+        <div class="row">
+            <div class="footer-texto col-md-3">
+                <p><b>Fantasy Games Corp</b></p>
+                <ul cass="footerLink">
+                    <li><p class="footerLink"><a href="">Empresa</a></p></li>
+                    <li><p class="footerLink"><a href="">Missão, Visão e Valores</a></p></li>
+                    <li><p class="footerLink"><a href="">Fantasy no Mundo</a></p></li>
+                    <li><p class="footerLink"><a href="">Nossos Parceiros</a></p></li>
+                    <li><p class="footerLink"><a href="">Trabalhe conosco</a></p></li>
+                </ul>
+            </div>
+            <div class="footer-texto col-md-3">
+                <p><b>Jogos</b></p>
+                <ul cass="footerLink">
+                    <li><p class="footerLink"><a href="">D&D.com</a></p></li>
+                    <li><p class="footerLink"><a href="">World of Warcraft</a></p></li>
+                    <li><p class="footerLink"><a href="">Guild Wars 2</a></p></li>
+                    <li><p class="footerLink"><a href="">Kal Online</a></p></li>
+                    <li><p class="footerLink"><a href="">Tetris!</a></p></li>
+                </ul>
+            </div>
+            <div class="footer-texto col-md-3">
+                <p><b>Midia</b></p>
+                <ul cass="footerLink">
+                    <li><p class="footerLink"><a href="">Wallpapers</a></p></li>
+                    <li><p class="footerLink"><a href="">Videos</a></p></li>
+                    <li><p class="footerLink"><a href="">Eventos</a></p></li>
+                    <li><p class="footerLink"><a href="">Imprensa</a></p></li>
+                </ul>
+                <p><b>Newsletter<br></b></p>
+                <form class="newsletter" action="">
+                    <input id="campo-email" type="email" placeholder="E-mail" required>
+                    <button onclick="enviarNewsletter()">Cadastrar</button>
+                </form>
+            </div>
+            <div class="footer-social col-md-3">
+                <a href=""><img class="fbBox" src="img/social_media/facebook_box.png"></a>
+                <a href=""><img class="socialIcon" src="img/social_media/instagram.png"></a>
+                <a href=""><img class="socialIcon" src="img/social_media/twitter.png"></a>
+                <a href=""><img class="socialIcon" src="img/social_media/youtube.png"></a>
+                <a href=""><img class="socialIcon" src="img/social_media/feed.png"></a>
+            </div>
+        </div>
+    </footer>
+
+    <section class="legal container">
+        <div class="legalLinks">
+            <div>
+                <a href="">Política de Privacidade &nbsp;</a>
+            </div>
+            <div>
+                |
+            </div>
+            <div>
+                <a href="">&nbsp; Avisos Legais &nbsp;</a>
+            </div>
+            <div>
+                |
+            </div>
+            <div>
+                <a href="">&nbsp; Política de Cookies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- <script>
+        let menu = document.getElementById("menu")
+
+        function mostrarMenu(){
+            if(menu.style.display != "flex"){
+                menu.style.display = "flex"
+            }else{
+                menu.style.display = "none"
+            }
+        }
+    </script> -->
+
+
+    <!-- Entrada JQuery -->
+    <script src="js/jquery-3.6.0.js"></script>
+
+
+    <!-- Nosso arquivo JavaScript -->
+    <script src="js/script.js"></script>
+
+
+    <!--BOOTSTRAP - JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
